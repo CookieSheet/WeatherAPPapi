@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/main.js" defer></script>
+  <div class="title">
+  <title>Weather API Call</title>
+  </div>
+</head>
+
+<body class="text-center" background="images/weatherBG.jpeg">
+  <h1>Weather API Call</h1>
+
+  <div class="inputCity">
+    <input type="text" size="45" id="city" placeholder="City">
+  </div>
+  <!-- Div Containing Buttons Go Here -->
+  <div>
+    <button class="btn btn-primary mx-3" onClick="loadData(document.getElementById('city').value)">Get Data</button>
+    <button class="btn btn-danger mx-3" onClick="clearData()">Clear Data</button>
+  </div>
+  <!-- Container to Hold API Elements in Card -->
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col-6 mx-auto">
+        <div class="card h-100 border-primary justify-content-center">
+          <div>
+            <div class="card-header">
+              High
+            </div>
+            <ul class="list-group list-group-flush highTemperature">
+              <li class="list-group-item">0</li>
+            </ul>
+            </form>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              Low
+            </div>
+            <ul class="list-group list-group-flush lowTemperature">
+              <li class="list-group-item">0</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              Humidity
+            </div>
+            <ul class="list-group list-group-flush humidity">
+              <li class="list-group-item">0</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              Forecast
+            </div>
+            <ul class="list-group list-group-flush forecast">
+              <li class="list-group-item">Rainbows!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
